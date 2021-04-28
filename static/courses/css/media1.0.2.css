@@ -1,0 +1,100 @@
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .courses_block {
+        flex-wrap: wrap;
+    }
+    .courses_item {
+        width: 48%;
+    }
+    .courses_item:nth-child(3) {
+        margin-top: 30px;
+    }
+    .topline_block > h2 {
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .form_block {
+        width: 100%;
+    }
+    .how_item {
+        flex-direction: column;
+    }
+    .how_item > span {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .how_item > p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .courses_item {
+        width: 100%;
+    }
+    .courses_item:nth-child(2) {
+        margin-top: 30px;
+    }
+    .courses_item:nth-child(3) {
+        margin-top: 30px;
+    }
+    .topline_block > h2 {
+        font-size: 50px;
+    }
+    .topline_block > p {
+        font-size: 25px;
+    }
+    .header {
+        height: 70px;
+    }
+    .header_link > img {
+        width: 50px;
+    }
+    .hamburger {
+        width: 50px;
+        height: 50px;
+    }
+    .hamburger.active > .hamburger_line:nth-child(1) {
+        transform: rotate(45deg) translate(11px, 9px);
+    }
+    .hamburger.active > .hamburger_line:nth-child(3) {
+        transform: rotate(-45deg) translate(11px, -9px);
+    }
+    .about_block > p {
+        font-size: 16px;
+    }
+    .how_item > p {
+        font-size: 16px;
+    }
+    .faq_item > p {
+        font-size: 18px;
+    }
+    .faq_icon {
+        font-size: 40px;
+    }
+    .slider_item {
+        padding: 0;
+    }
+    .header_menu {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .topline_block > h2 {
+        font-size: 40px;
+    }
+    .topline_block > p {
+        font-size: 20px;
+    }
+}
