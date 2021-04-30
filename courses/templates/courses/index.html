@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{% static 'courses/images/favicon.ico' %}" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+    <link rel="stylesheet" href="{% static 'courses/node_modules/aos/dist/aos.css' %}" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="{% static 'courses/css/reset1.0.2.css' %}">
     <link rel="stylesheet" href="{% static 'courses/css/style1.0.2.css' %}">
@@ -22,7 +22,7 @@
         <div class="container">
             <div class="header_block">
                 <div class="header_logo">
-                    <a href="#main" class="header_link"><img src="images/logo.png" alt="logo"></a>
+                    <a href="#main" class="header_link"><img src="{% static 'courses/images//logo.png' %}" alt="logo"></a>
                 </div>
                 <nav class="header_menu" id="menu">
                     <ul>
@@ -74,36 +74,90 @@
     <div class="courses" id="courses">
         <div class="container">
             <div data-aos="fade-up">
-                <h2 class="courses_heading">Курсы</h2>
+                <h2 class="courses_heading">Курсы программирования</h2>
                 <div class="courses_block">
                     <div class="courses_item">
-                        <img src="static/courses/images/python.svg" alt="python">
+                        <img src="{% static 'courses/images/python.svg' %}" alt="python">
                         <h3>Python</h3>
                         <ul class="courses_list">
-                            <li>Основы языка <span>Python</span></li>
-                            <li>Работа с сервером</li>
-                            <li>Работа с базами данных</li>
+                            <li>За 3 месяца вы изучите: </li>
+                            <li>-Основы языка <span>Python</span></li>
+                            <li>-Фреймворк Django </li>
+                            <li>-Паттерн MVC(Model-View-Template)</li>
+                            <li>-Веб-сервер (Apache)</li>
+                            <li>-База данных / Database / PostgeSQL</li>
+                            <li>-Контроль версий / Version Control / GitHub</li>
+                            <li>-Среда разработки / IDE / PyCharm / Visual Studio Code</li>
+
                         </ul>
                     </div>
                     <div class="courses_item">
-                        <img src="images/js.svg" alt="javascript">
+                        <img src="{% static 'courses/images/js.svg' %}" alt="javascript">
                         <h3>JavaScript</h3>
                         <ul class="courses_list">
-                            <li>Основы <span>HTML, CSS, JS</span></li>
-                            <li>Разработка сайтов</li>
-                            <li>Создание веб-приложений</li>
+                            <li>За 3 месеца Вы изучите: </li>
+                            <li>Основы <span>HTML, CSS3</span></li>
+                            <li>Front-End, Back-End</li>
+                            <li>jQuery</li>
+                            <li>NodeJs</li>
+                            <li>ExpressJs</li>
+                            <li>Database</li>
+                            <li>Version Control</li>
+
                         </ul>
                     </div>
                     <div class="courses_item">
-                        <img src="images/java.svg" alt="java">
+                        <img src="{% static 'courses/images/java.svg' %}" alt="java">
                         <h3>Java</h3>
                         <ul class="courses_list">
-                            <li>Основы языка <span>Java</span></li>
-                            <li>Работа с сервером</li>
-                            <li>Работа с базами данных</li>
+                             <li>За 3 месяца Вы изучите:</li>
+                             <li>Основы языка <span>Java</span></li>
+                             <li>Maven</li>
+                             <li>Git</li>
+                             <li>Работа с сервером</li>
+                             <li>Работа с базами данных</li>
                         </ul>
                     </div>
                 </div>
+
+              <div data-aos="fade-up">
+                <h2 class="courses_heading">Языковые курсы </h2>
+                <div class="courses_block">
+                    <div class="courses_item">
+                        <img src="{% static 'courses/images/english.svg' %}" alt="english">
+                        <h3>English</h3>
+                        <ul class="courses_list">
+                            <li>За 3 месяца Вы : </li>
+                            <li>-Спокойно заговорите на Английском</li>
+                            <li>-Выучите 5000 слов </li>
+                            <li>-Подготовитесь к ielts</li>
+                            <li>-Подготовите документы на Greencard</li>
+                        </ul>
+                    </div>
+                    <div class="courses_item">
+                        <img src="{% static 'courses/images/german.svg' %}" alt="german">
+                        <h3>German</h3>
+                        <ul class="courses_list">
+                            <li>За 3 месеца Вы : </li>
+                            <li>-Спокойно заговорите на Немецком</li>
+                            <li>-Выучите 5000 слов</li>
+                            <li>-Подготовитесь к FSP</li>
+                            <li>-Подготовитесь к DSH</li>
+                            <li>-Подготовитесь к TestDaF</li>
+                        </ul>
+                    </div>
+                    <div class="courses_item">
+                        <img src="{% static 'courses/images/china.svg' %}" alt="china">
+                        <h3>China</h3>
+                        <ul class="courses_list">
+                             <li>За 3 месяца Вы :</li>
+                             <li>-Спокойно заговорите на Китайском</li>
+                             <li>-Выучите 5000 слов</li>
+                             <li>-Сможете сдать тест для поступления в китайский университет</li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
             </div>
         </div>
     </div>
@@ -197,25 +251,25 @@
     <div class="slider" id="gallery">
         <div class="container">
             <div data-aos="fade">
-                <h2 class="slider_heading">Галерея</h2>
+                <h2 class="slider_heading">Преподаватели</h2>
                 <div class="slider_block">
                     <div class="slider_item">
-                        <img src="images/slider1.jpg" alt="slider1">
+                        <img src="{% static 'courses/images/slider1.jpg' %}" alt="slider1">
                     </div>
                     <div class="slider_item">
-                        <img src="images/slider4.jpg" alt="slider4">
+                        <img src="{% static 'courses/images/slider4.jpg' %}" alt="slider4">
                     </div>
                     <div class="slider_item">
-                        <img src="images/slider6.jpg" alt="slider6">
+                        <img src="{% static 'courses/images/slider6.jpg' %}" alt="slider6">
                     </div>
                     <div class="slider_item">
-                        <img src="images/slider2.jpg" alt="slider2">
+                        <img src="{% static 'courses/images/slider2.jpg'}" alt="slider2">
                     </div>
                     <div class="slider_item">
-                        <img src="images/slider5.jpg" alt="slider5">
+                        <img src="{% static 'courses/images/slider5.jpg' %}" alt="slider5">
                     </div>
                     <div class="slider_item">
-                        <img src="images/slider3.jpg" alt="slider3">
+                        <img src="{% static 'courses/images/slider3.jpg' %}" alt="slider3">
                     </div>
                 </div>
             </div>
@@ -272,13 +326,13 @@
                 </div>
                 <div class="footer_links">
                     <a href="mailto:init.kg@gmail.com" class="footer_link">
-                        <img src="images/mail.png" alt="mail">
+                        <img src="{% static 'courses/images/mail.png' %}" alt="mail">
                     </a>
                     <a href="https://www.instagram.com/init.kg/?hl=ru" target="_blank" class="footer_link">
-                        <img src="images/instagram.png" alt="instagram">
+                        <img src="{% static 'courses/images/instagram.png' %}" alt="instagram">
                     </a>
                     <a href="https://t.me/InitGroup" target="_blank" class="footer_link">
-                        <img src="images/telegram.png" alt="telegram">
+                        <img src="{% static 'courses/images/telegram.png' %}" alt="telegram">
                     </a>
                 </div>
             </div>
@@ -300,9 +354,9 @@
             DG.marker([42.879854, 74.618786]).addTo(map).bindPopup('INIT GROUP')
         });
     </script>
-    <script src="node_modules/particles.js/particles.js"></script>
-    <script src="node_modules/aos/dist/aos.js"></script>
+    <script src="{% static 'courses/node_modules/particles.js/particles.js' %}"></script>
+    <script src="{% static 'courses/node_modules/aos/dist/aos.js' %}"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="script1.0.2.js"></script>
+    <script src="{% static 'courses/js/script1.0.2.js' %}"></script>
 </body>
 </html>
