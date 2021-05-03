@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'courses/images/favicon.ico' %}" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'courses/node_modules/aos/dist/aos.css' %}" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="{% static 'courses/css/reset1.0.2.css' %}">
+    <link rel="stylesheet" href="{% static 'courses/css/style1.0.2.css' %}">
+    <link rel="stylesheet" href="{% static 'courses/css/media1.0.2.css' %}">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <div class="center" id="center">
+        <div id="loader"></div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header_block">
+                <div class="header_logo">
+                    <a href="#main" class="header_link"><img src="{% static 'courses/images//logo.png' %}" alt="logo"></a>
+                </div>
+                <nav class="header_menu" id="menu">
+                    <ul>
+                        <li class="header_item"><a href="#about" class="closeButton">О компании</a></li>
+                        <li class="header_item"><a href="#courses" class="closeButton">Курсы</a></li>
+                        <li class="header_item"><a href="#how" class="closeButton">Обучение</a></li>
+                        <li class="header_item"><a href="#faq" class="closeButton">FAQ</a></li>
+                        <li class="header_item"><a href="#gallery" class="closeButton">Галерея</a></li>
+                        <li class="header_item"><a href="#form" class="closeButton">Отправить заявку</a></li>
+                </ul>
+                </nav>
+                <div class="hamburger" id="hamburger">
+                    <span class="hamburger_line"></span>
+                    <span class="hamburger_line"></span>
+                    <span class="hamburger_line"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="topline" id="main">
+        <div class="container">
+            <div class="topline_block">
+                <h2> GangBang bootcamp</h2>
+                <p>твоя дверь в мир it технологий</p>
+            </div>
+            <div class="topline_particles" id="particles-js"></div>
+        </div>
+    </div>
+
+    <div class="about" id="about">
+        <div class="container">
+            <div data-aos="fade-up">
+                <h2 class="about_heading">О компании</h2>
+                <div class="about_block">
+                    <p>
+                        Наша компания — это динамично развивающийся молодой коллектив профессионалов своего дела.
+                        Мы знаем, как получать результаты в кратчайшие сроки и поможем Вам познакомиться с миром программирования.
+                        В век технологий и быстрого темпа жизни мы идем в ногу со временем, как и наши студенты.
+                        Вы пройдете путь с нуля до junior разработчика под руководством наших менторов.
+                        Авторская программа, разработанная нашими ведущими специалистами позволяет всего за 2,5 месяца освоить самые популярные языки программирования - PYTHON, JAVA, JAVASCRIPT.
+                        Мы заботимся об экономии вашего времени и расходов на обучение для более интенсивного развития.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="courses" id="courses">
+        <div class="container">
+            <div data-aos="fade-up">
+                <h2 class="courses_heading">Курсы программирования</h2>
+                <div class="courses_block">
+                    <div class="courses_item">
+                        {% for item in python %}
+                        <img src="{%  %}" alt="python">
+
+                            <h3>{{ item.title }}</h3>
+                        <ul class="courses_list">
+                            <li>{{ item.description }} </li>
+                            <li>{{ item.price }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <div class="courses_item">
+                        <img src="{% static 'courses/images/js.svg' %}" alt="javascript">
+                        {% for item in javascript %}
+                            <h3>{{ item.title }}</h3>
+                        <ul class="courses_list">
+                            <li>{{ item.description }} </li>
+                            <li>{{ item.price }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <div class="courses_item">
+                        <img src="{% static 'courses/images/java.svg' %}" alt="java">
+                       {% for item in java %}
+                            <h3>{{ item.title }}</h3>
+                        <ul class="courses_list">
+                            <li>{{ item.description }} </li>
+                            <li>{{ item.price }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+              <div data-aos="fade-up">
+                <h2 class="courses_heading">Языковые курсы </h2>
+                <div class="courses_block">
+                    <div class="courses_item">
+                        <img src="{% static 'courses/images/english.svg' %}" alt="english">
+                        {% for item in english %}
+                            <h3>{{ item.title }}</h3>
+                        <ul class="courses_list">
+                            <li>{{ item.description }} </li>
+                            <li>{{ item.price }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <div class="courses_item">
+                        <img src="{% static 'courses/images/german.svg' %}" alt="german">
+                        {% for item in german %}
+                            <h3>{{ item.title }}</h3>
+                        <ul class="courses_list">
+                            <li>{{ item.description }} </li>
+                            <li>{{ item.price }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <div class="courses_item">
+                        <img src="{% static 'courses/images/china.svg' %}" alt="china">
+                        {% for item in china %}
+                            <h3>{{ item.title }}</h3>
+                        <ul class="courses_list">
+                            <li>{{ item.description }} </li>
+                            <li>{{ item.price }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                </div>
+              </div>
+                  <div data-aos="fade-up">
+                <h2 class="courses_heading">Научные курсы </h2>
+                <div class="courses_block">
+                    <div class="courses_item">
+                        <img src="{% static 'courses/images/maths.jpg' %}" alt="english">
+                        {% for item in math %}
+                            <h3>{{ item.title }}</h3>
+                        <ul class="courses_list">
+                            <li>{{ item.description }} </li>
+                            <li>{{ item.price }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <div class="courses_item">
+                        <img src="{% static 'courses/images/физика.png' %}" alt="german">
+                        {% for item in physics %}
+                            <h3>{{ item.title }}</h3>
+                        <ul class="courses_list">
+                            <li>{{ item.description }} </li>
+                            <li>{{ item.price }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <div class="courses_item">
+                        <img src="{% static 'courses/images/CHEMISTRY.jpg' %}" alt="china">
+                        {% for item in chemistry %}
+                            <h3>{{ item.title }}</h3>
+                        <ul class="courses_list">
+                            <li>{{ item.description }} </li>
+                            <li>{{ item.price }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="how" id="how">
+        <div class="container">
+            <div data-aos="fade-right">
+                <h2 class="how_heading">Как проходит обучение</h2>
+                <div class="how_block">
+                    <div class="how_item">
+                        <span>01<span class="how_colored">.</span></span>
+                        <p>Занятия проходят по интенсивной системе обучения - bootcamp. Менторы проводят обучение в течение 3-5 часов в день. После,занятий каждому студенту доступна коворкинг-зона, где можно вместе выполнять задания, общаться и обучаться самостоятельно. Такой подход позволяет добиться высоких результатов за короткий срок времени.</p>
+                    </div>
+                    <div class="how_item">
+                        <span>02<span class="how_colored">.</span></span>
+                        <p>Кроме основных занятий мы часто проводим митапы, куда приглашаем разных опытных спикеров, наши ученики также имеют доступ ко всем ивентам. Не забываем и про тимбилдинги: хакатоны, походы, Pizza Day, Init party.</p>
+                    </div>
+                    <div class="how_item">
+                        <span>03<span class="how_colored">.</span></span>
+                        <p>На протяжении всего срока учебы мы готовим каждого студента к трудоустройству: готовим портфолио из проектов, реализованных в рамках учебы на хакатонах, составляем резюме и проводим интервью. По окончанию обучения мы выдаем сертификат, лучшим - предлагаем стажировку в нашей компаниии, либо рекомендуем в другие IT-компании.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq" id="faq">
+        <div class="container">
+            <div data-aos="fade-down">
+                <h2 class="faq_heading">Часто задаваемые вопросы</h2>
+                <div class="faq_block">
+                    <div class="faq_item accordion">
+                        <p>Стоимость</p>
+                        <i class="material-icons faq_icon">keyboard_arrow_down</i>
+                    </div>
+                    <div class="panel">
+                        <p>
+                            Полная стоимость курса составляет 42000 сом.
+                            За эту сумму вы получите:
+                            <ul style="color: #fff; list-style: circle; margin-top: 20px;">
+                                <li>Занятия 6 раз в неделю по 3-5 часов.</li>
+                                <li>Несколько проектов для вашего портфолио.</li>
+                                <li>Бесплатная коворкинг зона, где можно заниматься самостоятельно.</li>
+                                <li>Подготовка к интервью с работодателем.</li>
+                                <li>Возможность пройти стажировку в нашей компании.</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="faq_item accordion">
+                        <p>Можно заплатить частями?</p>
+                        <i class="material-icons faq_icon">keyboard_arrow_down</i>
+                    </div>
+                    <div class="panel">
+                        <p>Да, вы можете оплатить курс тремя частями.</p>
+                    </div>
+                    <div class="faq_item accordion">
+                        <p>Есть ли трудоустройство после курса?</p>
+                        <i class="material-icons faq_icon">keyboard_arrow_down</i>
+                    </div>
+                    <div class="panel">
+                        <p>
+                            Мы прилагаем все усилия, чтобы помочь
+                            трудоустроиться нашим студентам,
+                            но не даем гарантии трудоустройства.
+                        </p>
+                    </div>
+                    <div class="faq_item accordion">
+                        <p>Что необходимо для обучения?</p>
+                        <i class="material-icons faq_icon">keyboard_arrow_down</i>
+                    </div>
+                    <div class="panel">
+                        <p>Для обучения вам необходим личный ноутбук и желание научиться программировать.</p>
+                    </div>
+                    <div class="faq_item accordion">
+                        <p>Какой преподавательский состав?</p>
+                        <i class="material-icons faq_icon">keyboard_arrow_down</i>
+                    </div>
+                    <div class="panel">
+                        <p>
+                            Со студентами работают несколько специалистов: старший ментор и младший ментор. 
+                            Все ментора проходят квалификацию, прежде чем приступить к работе. 
+                            Стаж старших преподавателей от 1 года опыта в коммерческой разработке и наличие портфолио 
+                            с проектами средней - высокой сложности.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider" id="gallery">
+        <div class="container">
+            <div data-aos="fade">
+                <h2 class="slider_heading">Преподаватели</h2>
+                <div class="slider_block">
+                    <div class="slider_item">
+                        <img src="{% static 'courses/images/slider1.jpg' %}" alt="slider1">
+                    </div>
+                    <div class="slider_item">
+                        <img src="{% static 'courses/images/slider4.jpg' %}" alt="slider4">
+                    </div>
+                    <div class="slider_item">
+                        <img src="{% static 'courses/images/slider6.jpg' %}" alt="slider6">
+                    </div>
+                    <div class="slider_item">
+                        <img src="{% static 'courses/images/slider2.jpg'}" alt="slider2">
+                    </div>
+                    <div class="slider_item">
+                        <img src="{% static 'courses/images/slider5.jpg' %}" alt="slider5">
+                    </div>
+                    <div class="slider_item">
+                        <img src="{% static 'courses/images/slider3.jpg' %}" alt="slider3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form" id="form">
+        <div class="container">
+            <div data-aos="fade-right">
+                <h2 class="form_heading">Отправьте заявку на курс</h2>
+                <form class="form_block">
+                    <div class="form_input">
+                        <label for="name">Имя</label>
+                        <input type="text" placeholder="-----" name="name" id="name" required>
+                    </div>
+                    <div class="form_input">
+                        <label for="phoneNumber">Номер телефона</label>
+                        <input type="number" placeholder="-----"  name="phoneNumber" id="phoneNumber" required>
+                    </div>
+                    <div class="form_input">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="-----"  name="email" id="email" required>
+                    </div>
+                    <h3 class="form_label mt">Язык</h3>
+                    <div class="form_radio">
+                        <input type="radio" name="language" id="python" value="Python">
+                        <label for="python">Python</label> <br>
+                        <input type="radio" name="language" id="javascript" value="JavaScript">
+                        <label for="javascript">JavaScript</label> <br>
+                        <input type="radio" name="language" id="java" value="Java">
+                        <label for="java">Java</label>
+                    </div>
+                    <h3 class="form_label">Время</h3>
+                    <div class="form_radio">
+                        <input type="radio" name="time" id="morning" value="Утро">
+                        <label for="morning">Утро</label> <br>
+                        <input type="radio" name="time" id="evening" value="Вечер">
+                        <label for="evening">Вечер</label>
+                    </div>
+                    <button id="submit" type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="map" class="map" style="width: 100%; height: 500px;">
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_block">
+                <div class="footer_logo">
+                    <a href="#main" class="footer_linkLogo">&copy; GangBang GROUP</a>
+                </div>
+                <div class="footer_links">
+                    <a href="mailto:init.kg@gmail.com" class="footer_link">
+                        <img src="{% static 'courses/images/mail.png' %}" alt="mail">
+                    </a>
+                    <a href="https://www.instagram.com/init.kg/?hl=ru" target="_blank" class="footer_link">
+                        <img src="{% static 'courses/images/instagram.png' %}" alt="instagram">
+                    </a>
+                    <a href="https://t.me/InitGroup" target="_blank" class="footer_link">
+                        <img src="{% static 'courses/images/telegram.png' %}" alt="telegram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <script type="text/javascript">
+        var map;
+    
+        DG.then(function () {
+            map = DG.map('map', {
+                center: [42.879854, 74.618786],
+                zoom: 20
+            });
+
+            DG.marker([42.879854, 74.618786]).addTo(map).bindPopup('INIT GROUP')
+        });
+    </script>
+    <script src="{% static 'courses/node_modules/particles.js/particles.js' %}"></script>
+    <script src="{% static 'courses/node_modules/aos/dist/aos.js' %}"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="{% static 'courses/js/script1.0.2.js' %}"></script>
+</body>
+</html>

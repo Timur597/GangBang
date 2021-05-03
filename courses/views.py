@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseNotFound, Http404
+
+# from .forms import ContactForm
 from .models import *
 from django.views.generic import ListView, DetailView
 from django.core.mail import send_mail
@@ -10,9 +12,31 @@ from django.contrib import messages
 
 
 def index(request):
-    return render(request, 'courses/index.html')
+    python = Courses.objects.filter(id=1)
+    javascript = Courses.objects.filter(id=2)
+    java = Courses.objects.filter(id=3)
+    english = Courses.objects.filter(id=4)
+    german = Courses.objects.filter(id=5)
+    china = Courses.objects.filter(id=6)
+    math = Courses.objects.filter(id=7)
+    physics = Courses.objects.filter(id=8)
+    chemistry = Courses.objects.filter(id=9)
+    context = {
+        'python': python,
+        'title': 'Gang bang',
+        'javascript': javascript,
+        'java': java,
+        'english': english,
+        'german': german,
+        'china': china,
+        'math': math,
+        'physics': physics,
+        'chemistry': chemistry,
 
-#
+    }
+    return render(request, 'base.html', context=context)
+
+
 # def contact(request):
 #     if request.method == 'POST':
 #         form = ContactForm(request.POST)
@@ -25,11 +49,11 @@ def index(request):
 #             else:
 #                 messages.error(request, 'Ошибка отправки')
 #         else:
-#             messages.error(request, "Ошибка регистрации")
+#             messages.error(request, "Ошибка отправки, заполните поля")
 #     else:
 #         form = ContactForm()
 #     return render(request, 'news/test.html', {'form': form})
-#
+# #
 #
 # class Home(ListView):
 #     model = Courses

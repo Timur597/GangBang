@@ -11,13 +11,12 @@ class CoursesAdmin(admin.ModelAdmin):
     save_as = True
     save_on_top = True
     list_display = ('id', 'title', 'slug', 'category', 'description', 'price', 'photo',
-                    'get_photo', 'methods', 'questions', 'teachers', 'students')
+                    'get_photo')
     list_display_links = ('id', 'title')
     search_fields = ('title',)
     list_filter = ('category', )
     readonly_fields = ('get_photo',)
-    fields = ('title', 'slug', 'category', 'description', 'price', 'photo', 'get_photo', 'methods', 'teachers',
-              'questions', 'students')
+    fields = ('title', 'slug', 'category', 'description', 'price', 'photo', 'get_photo')
 
     def get_photo(self, obj):
         if obj.photo:
@@ -29,16 +28,15 @@ class CoursesAdmin(admin.ModelAdmin):
 
 @admin.register(Teachers)
 class TeachersAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug': ('name',)}
     # form = CoursesAdminForm
     save_as = True
     save_on_top = True
-    list_display = ('id', 'name', 'slug', 'age', 'phone', 'email', 'experience', 'photo', 'get_photo')
+    list_display = ('id', 'name', 'age', 'phone', 'email', 'experience', 'photo', 'courses', 'get_photo')
     list_display_links = ('id', 'name')
     search_fields = ('name',)
     list_filter = ('experience', )
     readonly_fields = ('get_photo',)
-    fields = ('name', 'slug', 'age', 'phone', 'email', 'experience', 'photo', 'get_photo')
+    fields = ('name', 'age', 'phone', 'email', 'experience', 'photo', 'courses', 'get_photo')
 
     def get_photo(self, obj):
         if obj.photo:
@@ -50,16 +48,15 @@ class TeachersAdmin(admin.ModelAdmin):
 
 @admin.register(Students)
 class StudentsAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug': ('name',)}
     # form = CoursesAdminForm
     save_as = True
     save_on_top = True
-    list_display = ('id', 'name', 'slug', 'age', 'phone', 'email', 'rating', 'photo', 'get_photo')
+    list_display = ('id', 'name', 'age', 'phone', 'email', 'rating', 'photo', 'courses', 'get_photo')
     list_display_links = ('id', 'name')
     search_fields = ('name',)
     list_filter = ('rating', )
     readonly_fields = ('get_photo',)
-    fields = ('name', 'slug', 'age', 'phone', 'email', 'rating', 'photo', 'get_photo')
+    fields = ('name', 'age', 'phone', 'email', 'rating', 'courses', 'photo', 'get_photo')
 
     def get_photo(self, obj):
         if obj.photo:
