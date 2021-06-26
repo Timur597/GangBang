@@ -8,7 +8,53 @@ from django.core.mail import send_mail
 from django.contrib import messages
 
 
+def teachers(request):
+    teacher1 = Teachers.objects.filter(id=1)
+    teacher2 = Teachers.objects.filter(id=2)
+    teacher3 = Teachers.objects.filter(id=3)
+    teacher4 = Teachers.objects.filter(id=4)
+    teacher5 = Teachers.objects.filter(id=5)
+    teacher6 = Teachers.objects.filter(id=6)
+    teacher7 = Teachers.objects.filter(id=7)
+    teacher8 = Teachers.objects.filter(id=8)
+    teacher9 = Teachers.objects.filter(id=9)
+    context = {
+        'teacher1': teacher1,
+        'teacher2': teacher2,
+        'teacher3': teacher3,
+        'teacher4': teacher4,
+        'teacher5': teacher5,
+        'teacher6': teacher6,
+        'teacher7': teacher7,
+        'teacher8': teacher8,
+        'teacher9': teacher9,
+    }
+    return render(request, 'teachers.html', context=context)
 
+
+def students(request):
+    student1 = Students.objects.filter(id=1)
+    student2 = Students.objects.filter(id=2)
+    student3 = Students.objects.filter(id=3)
+    student4 = Students.objects.filter(id=4)
+    student5 = Students.objects.filter(id=5)
+    student6 = Students.objects.filter(id=6)
+    student7 = Students.objects.filter(id=7)
+    student8 = Students.objects.filter(id=8)
+    student9 = Students.objects.filter(id=9)
+    context = {
+
+        'student1': student1,
+        'student2': student2,
+        'student3': student3,
+        'student4': student4,
+        'student5': student5,
+        'student6': student6,
+        'student7': student7,
+        'student8': student8,
+        'student9': student9,
+    }
+    return render(request, 'students.html', context=context)
 
 
 def index(request):
@@ -21,6 +67,24 @@ def index(request):
     math = Courses.objects.filter(id=7)
     physics = Courses.objects.filter(id=8)
     chemistry = Courses.objects.filter(id=9)
+    student1 = Students.objects.filter(id=1)
+    student2 = Students.objects.filter(id=2)
+    student3 = Students.objects.filter(id=3)
+    student4 = Students.objects.filter(id=4)
+    student5 = Students.objects.filter(id=5)
+    student6 = Students.objects.filter(id=6)
+    student7 = Students.objects.filter(id=7)
+    student8 = Students.objects.filter(id=8)
+    student9 = Students.objects.filter(id=9)
+    teacher1 = Teachers.objects.filter(id=1)
+    teacher2 = Teachers.objects.filter(id=2)
+    teacher3 = Teachers.objects.filter(id=3)
+    teacher4 = Teachers.objects.filter(id=4)
+    teacher5 = Teachers.objects.filter(id=5)
+    teacher6 = Teachers.objects.filter(id=6)
+    teacher7 = Teachers.objects.filter(id=7)
+    teacher8 = Teachers.objects.filter(id=8)
+    teacher9 = Teachers.objects.filter(id=9)
     context = {
         'python': python,
         'title': 'Gang bang',
@@ -32,7 +96,24 @@ def index(request):
         'math': math,
         'physics': physics,
         'chemistry': chemistry,
-
+        'student1': student1,
+        'student2': student2,
+        'student3': student3,
+        'student4': student4,
+        'student5': student5,
+        'student6': student6,
+        'student7': student7,
+        'student8': student8,
+        'student9': student9,
+        'teacher1': teacher1,
+        'teacher2': teacher2,
+        'teacher3': teacher3,
+        'teacher4': teacher4,
+        'teacher5': teacher5,
+        'teacher6': teacher6,
+        'teacher7': teacher7,
+        'teacher8': teacher8,
+        'teacher9': teacher9,
     }
     return render(request, 'base.html', context=context)
 

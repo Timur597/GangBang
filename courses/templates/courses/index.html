@@ -1,10 +1,118 @@
 <!DOCTYPE html>
+{% extends 'base.html' %}
+{% block languages%}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
-</head>
-<body>
-{{ courses }}
-</body>
+<div class="courses" id="courses">
+        <div class="container">
+            <div data-aos="fade-up">
+                <h2 class="courses_heading">Курсы программирования</h2>
+                <div class="courses_block">
+                    <div class="courses_item">
+                        {% for item in python %}
+                        <img src="{% static 'courses/images/python.svg' %}" alt="python">
+
+                            <h3>{{ item.title }}</h3>
+                        <ul class="courses_list">
+                            <li>{{ item.description }} </li>
+                            <li>{{ item.price }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <div class="courses_item">
+                        <img src="{% static 'courses/images/js.svg' %}" alt="javascript">
+                        {% for item in javascript %}
+                            <h3>{{ item.title }}</h3>
+                        <ul class="courses_list">
+                            <li>{{ item.description }} </li>
+                            <li>{{ item.price }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <div class="courses_item">
+                        <img src="{% static 'courses/images/java.svg' %}" alt="java">
+                       {% for item in java %}
+                            <h3>{{ item.title }}</h3>
+                        <ul class="courses_list">
+                            <li>{{ item.description }} </li>
+                            <li>{{ item.price }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+                <h2 class="courses_heading"></h2>
+              <div data-aos="fade-up">
+                <h2 class="courses_heading">Языковые курсы </h2>
+                <div class="courses_block">
+                    <div class="courses_item">
+                        <img src="{% static 'courses/images/english.svg' %}" alt="english">
+                        {% for item in english %}
+                            <h3>{{ item.title }}</h3>
+                        <ul class="courses_list">
+                            <li>{{ item.description }} </li>
+                            <li>{{ item.price }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <div class="courses_item">
+                        <img src="{% static 'courses/images/german.svg' %}" alt="german">
+                        {% for item in german %}
+                            <h3>{{ item.title }}</h3>
+                        <ul class="courses_list">
+                            <li>{{ item.description }} </li>
+                            <li>{{ item.price }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <div class="courses_item">
+                        <img src="{% static 'courses/images/china.svg' %}" alt="china">
+                        {% for item in china %}
+                            <h3>{{ item.title }}</h3>
+                        <ul class="courses_list">
+                            <li>{{ item.description }} </li>
+                            <li>{{ item.price }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                </div>
+              </div>
+                  <h2 class="courses_heading"></h2>
+                  <div data-aos="fade-up">
+                <h2 class="courses_heading">Научные курсы </h2>
+                <div class="courses_block">
+                    <div class="courses_item">
+                        <img src="{% static 'courses/images/maths.jpg' %}" alt="english">
+                        {% for item in math %}
+                            <h3>{{ item.title }}</h3>
+                        <ul class="courses_list">
+                            <li>{{ item.description }} </li>
+                            <li>{{ item.price }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <div class="courses_item">
+                        <img src="{% static 'courses/images/физика.png' %}" alt="german">
+                        {% for item in physics %}
+                            <h3>{{ item.title }}</h3>
+                        <ul class="courses_list">
+                            <li>{{ item.description }} </li>
+                            <li>{{ item.price }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <div class="courses_item">
+                        <img src="{% static 'courses/images/CHEMISTRY.jpg' %}" alt="china">
+                        {% for item in chemistry %}
+                            <h3>{{ item.title }}</h3>
+                        <ul class="courses_list">
+                            <li>{{ item.description }} </li>
+                            <li>{{ item.price }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
 </html>
+{% endblock %}

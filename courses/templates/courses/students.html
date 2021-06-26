@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block students %}
+<div data-aos="fade-up">
+                <h2 class="courses_heading"></h2>
+                <h2 class="courses_heading">Наши студенты</h2>
+                <div class="courses_block">
+                    <div class="courses_item">
+                        {% for item in student1 %}
+                        <img src="{% static 'courses/images/python.svg' %}" alt="python">
+
+                            <h3>{{ item.name }}</h3>
+                        <ul class="courses_list">
+                            <li>Возраст: {{ item.age }} </li>
+                            <li>Телефон: +{{ item.phone }} </li>
+                            <li>{{ item.email }} </li>
+                            <li>Рейтинг: {{ item.rating }} </li>
+                            <li>Изучает: {{ item.courses }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <div class="courses_item">
+                        {% for item in student2 %}
+                        <img src="{% static 'courses/images/python.svg' %}" alt="python">
+
+                            <h3>{{ item.name }}</h3>
+                        <ul class="courses_list">
+                            <li>Возраст: {{ item.age }} </li>
+                            <li>Телефон: +{{ item.phone }} </li>
+                            <li>{{ item.email }} </li>
+                            <li>Рейтинг: {{ item.rating }} </li>
+                            <li>Изучает: {{ item.courses }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <div class="courses_item">
+                         {% for item in student3 %}
+                        <img src="{% static 'courses/images/python.svg' %}" alt="python">
+
+                            <h3>{{ item.name }}</h3>
+                        <ul class="courses_list">
+                            <li>Возраст: {{ item.age }} </li>
+                            <li>Телефон: +{{ item.phone }} </li>
+                            <li>{{ item.email }} </li>
+                            <li>Рейтинг: {{ item.rating }} </li>
+                            <li>Изучает: {{ item.courses }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                </div>
+                <h2 class="courses_heading"></h2>
+                <div data-aos="fade-up">
+                  <div class="courses_block">
+                    <div class="courses_item">
+                         {% for item in student4 %}
+                        <img src="{% static 'courses/images/python.svg' %}" alt="python">
+
+                            <h3>{{ item.name }}</h3>
+                        <ul class="courses_list">
+                            <li>Возраст: {{ item.age }} </li>
+                            <li>Телефон: +{{ item.phone }} </li>
+                            <li>{{ item.email }} </li>
+                            <li>Рейтинг: {{ item.rating }} </li>
+                            <li>Изучает: {{ item.courses }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <div class="courses_item">
+                         {% for item in student5 %}
+                        <img src="{% static 'courses/images/python.svg' %}" alt="python">
+
+                            <h3>{{ item.name }}</h3>
+                        <ul class="courses_list">
+                            <li>Возраст: {{ item.age }} </li>
+                            <li>Телефон: +{{ item.phone }} </li>
+                            <li>{{ item.email }} </li>
+                            <li>Рейтинг: {{ item.rating }} </li>
+                            <li>Изучает: {{ item.courses }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <div class="courses_item">
+                        {% for item in student6 %}
+                        <img src="{% static 'courses/images/python.svg' %}" alt="python">
+
+                            <h3>{{ item.name }}</h3>
+                        <ul class="courses_list">
+                            <li>Возраст: {{ item.age }} </li>
+                            <li>Телефон: +{{ item.phone }} </li>
+                            <li>{{ item.email }} </li>
+                            <li>Рейтинг: {{ item.rating }} </li>
+                            <li>Изучает: {{ item.courses }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                  </div>
+                </div>
+                <h2 class="courses_heading"></h2>
+                <div data-aos="fade-up">
+                  <div class="courses_block">
+                    <div class="courses_item">
+                         {% for item in student7 %}
+                        <img src="{% static 'courses/images/python.svg' %}" alt="python">
+
+                            <h3>{{ item.name }}</h3>
+                        <ul class="courses_list">
+                            <li>Возраст: {{ item.age }} </li>
+                            <li>Телефон: +{{ item.phone }} </li>
+                            <li>{{ item.email }} </li>
+                            <li>Рейтинг: {{ item.rating }} </li>
+                            <li>Изучает: {{ item.courses }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <div class="courses_item">
+                         {% for item in student8 %}
+                        <img src="{% static 'courses/images/python.svg' %}" alt="python">
+
+                            <h3>{{ item.name }}</h3>
+                        <ul class="courses_list">
+                            <li>Возраст: {{ item.age }} </li>
+                            <li>Телефон: +{{ item.phone }} </li>
+                            <li>{{ item.email }} </li>
+                            <li>Рейтинг: {{ item.rating }} </li>
+                            <li>Изучает: {{ item.courses }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                    <div class="courses_item">
+                        {% for item in student9 %}
+                        <img src="{% static 'courses/images/python.svg' %}" alt="python">
+
+                            <h3>{{ item.name }}</h3>
+                        <ul class="courses_list">
+                            <li>Возраст: {{ item.age }} </li>
+                            <li>Телефон: +{{ item.phone }} </li>
+                            <li>{{ item.email }} </li>
+                            <li>Рейтинг: {{ item.rating }} </li>
+                            <li>Изучает: {{ item.courses }} </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
